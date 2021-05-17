@@ -155,6 +155,7 @@ while ((val == 0) )
   	else if (FD_ISSET(sockVente, &lect))
   	{
   		//reeception du prix des clients
+  		
   		lgadclient= sizeof(struct sockaddr_in);
   		if ((recu = recvfrom(sockVente, &prixrecu, sizeof(int), 0, (struct sockaddr *) &adClient, &lgadclient))==-1) 
 	    {
@@ -179,6 +180,7 @@ while ((val == 0) )
 
 		printf("voulez vous continuez ? 0= oui , 1= non\n");
 	    scanf("%d", &val);
+	    
 	    
 
 	}
